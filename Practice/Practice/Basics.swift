@@ -67,6 +67,7 @@ func basics() {
     }
     
     
+    
     //Tuplesin
     var tuple1 = (34, point: "Points", true)
     if tuple1.2 {
@@ -126,7 +127,6 @@ func basics() {
     let str1: String! = "Optional string two"
     let strImplicit: String = str1 // Unwrapped automatically
     
-    
     //Error Handlingin page link
     do {
         let confirmation = try rentCar(paymentMethod: "CreditCard")
@@ -138,7 +138,6 @@ func basics() {
     } catch {
         print("An unknown error occurred: \(error)")
     }
-    
     
     let temperature = 36.6
     if temperature > 36.0 && temperature < 37.0 {
