@@ -66,7 +66,113 @@ func basics() {
         print("This account does not exist")
     }
     
+    
     //Tuplesin
+    var tuple1 = (34, point: "Points", true)
+    if tuple1.2 {
+        print("\(tuple1.0) \(tuple1.point) - confirmed")
+        tuple1.0 = 50
+    }
+    else {
+        let (q, _, _) = tuple1
+        print("\(q) \(tuple1.point) - not confirmed")
+    }
+    
+    //Optional and nil
+    let possibleNumber = "123"
+    let convertedNumber = Int(possibleNumber) ?? nil
+    print(convertedNumber)
+    
+    var converted: Int?
+    if converted != nil {
+        print("Works")
+    }
+    else {
+        print("Not worrking")
+    }
+    
+    if let possibleNumber = Int(possibleNumber) {
+        print("The string \"\(possibleNumber)\" has an integer value of \(possibleNumber)")
+    } else {
+        print("The string \"\(possibleNumber)\" couldn't be converted to an integer")
+    }
+    
+    let myNumber = Int(possibleNumber)
+    if let myNumber {
+        print("The string \(myNumber)")
+    }
     
     
+    if let firstNum = Int("32"), let secondNum = Int("65"), firstNum < secondNum && secondNum > 3 {
+        print("\(firstNum) < \(secondNum) > 3")
+    }
+    
+    guard let myNumber else {
+        print("Noname")
+        return
+    }
+    
+    var num1 = "234"
+    let num2 = Int(num1)
+    let num3 = num2!
+    guard let num3 = num2 else {
+        fatalError("The number was invalid")
+    }
+
+    //Implicitly Unwrapped Optionalsin
+    let str: String? = "Optional string one"
+    let srtFinal: String = str! // Requires explicit unwrapping
+
+    let str1: String! = "Optional string two"
+    let strImplicit: String = str1 // Unwrapped automatically
+    
+    
+    //Error Handlingin page link
+    do {
+        let confirmation = try rentCar(paymentMethod: "CreditCard")
+        print(confirmation)
+    } catch RentalError.noAvailableCars {
+        print("No available cars")
+    } catch RentalError.paymentFailed {
+        print("Payment failed")
+    } catch {
+        print("An unknown error occurred: \(error)")
+    }
+    
+    
+    let temperature = 36.6
+    if temperature > 36.0 && temperature < 37.0 {
+        print("Are you healthy")
+    }
+    else if temperature >= 37.0 && temperature <= 38.5 {
+        assertionFailure("Is there something wrong with you")
+    }
+    //assert(temperature > 41.0, "Call an ambulance")
+    
+    let index = 2
+    precondition(index > 0, "Index must be greater than zero.")
+}
+
+enum RentalError: Error {
+    case noAvailableCars
+    case paymentFailed
+}
+
+func rentCar(paymentMethod: String) throws -> String {
+    let availableCars = 1
+    let methodPayment = "CreditCard"
+    
+    guard availableCars > 0 else {
+        throw RentalError.noAvailableCars
+    }
+    
+    for i in methodPayment {
+        
+    }
+    
+    guard methodPayment == paymentMethod else {
+        throw RentalError.paymentFailed
+    }
+    
+    return "Car rented successfully!"
 }
