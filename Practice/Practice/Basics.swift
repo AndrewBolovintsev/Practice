@@ -166,10 +166,6 @@ func rentCar(paymentMethod: String) throws -> String {
         throw RentalError.noAvailableCars
     }
     
-    for i in methodPayment {
-        
-    }
-    
     guard methodPayment == paymentMethod else {
         throw RentalError.paymentFailed
     }
