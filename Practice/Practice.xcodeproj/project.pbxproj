@@ -18,6 +18,7 @@
 		A09807202C172A7600B8138F /* PracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A098071F2C172A7600B8138F /* PracticeTests.swift */; };
 		A098072A2C172A7600B8138F /* PracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09807292C172A7600B8138F /* PracticeUITests.swift */; };
 		A098072C2C172A7600B8138F /* PracticeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A098072B2C172A7600B8138F /* PracticeUITestsLaunchTests.swift */; };
+		A0B5D4672C19CDD300B5923F /* Strings and Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B5D4662C19CDD300B5923F /* Strings and Characters.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		A09807252C172A7600B8138F /* PracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A09807292C172A7600B8138F /* PracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeUITests.swift; sourceTree = "<group>"; };
 		A098072B2C172A7600B8138F /* PracticeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A0B5D4662C19CDD300B5923F /* Strings and Characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Strings and Characters.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				A09807132C172A7500B8138F /* LaunchScreen.storyboard */,
 				A09807162C172A7500B8138F /* Info.plist */,
 				A0967A862C184F080002CC9A /* Basic Operators.swift */,
+				A0B5D4662C19CDD300B5923F /* Strings and Characters.swift */,
 			);
 			path = Practice;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0B5D4672C19CDD300B5923F /* Strings and Characters.swift in Sources */,
 				A0967A872C184F080002CC9A /* Basic Operators.swift in Sources */,
 				A0558A9F2C173FEC00862740 /* Basics.swift in Sources */,
 				A098070D2C172A7300B8138F /* ViewController.swift in Sources */,

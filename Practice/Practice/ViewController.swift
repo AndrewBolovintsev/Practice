@@ -13,5 +13,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         basics()
         basicOperators()
+        stringAndCharacters()
     }
 }
