@@ -171,3 +171,4 @@ func rentCar(paymentMethod: String) throws -> String {
     
     return "Car rented successfully!"
 }
+

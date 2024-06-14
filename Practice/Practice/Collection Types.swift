@@ -7,7 +7,45 @@
 
 import Foundation
 
+class Shape: Collection {
+    typealias Element = String
+    
+    var startIndex: Int {
+        return elements.startIndex
+    }
+    
+    var endIndex: Int {
+        return elements.endIndex
+    }
+    
+    var elements: [Element]
+    
+    init(elements: [Element]) {
+        self.elements = elements
+    }
+    
+    subscript(position: Int) -> Element {
+        return elements[position]
+    }
+    
+    func index(after i: Int) -> Int {
+        return elements.index(after: i)
+    }
+}
+
 func collectionTypes() {
+    
+    let dfs = Shape(elements: ["wefaws", "wwefwesa", "sregeszd"])
+    print(dfs)
+    
+    let dsf = "wrtegfsd"
+    
+    if dsf is (any Collection) {
+        print("String is Collection")
+    }
+    else {
+        print("String is not Collection")
+    }
     
     //Array
     var arr: [Int] = []
@@ -15,6 +53,7 @@ func collectionTypes() {
     print(arr)
     
     let arr1 = ArraySlice(repeating: 4, count: 3)
+    let arr6 = Array(repeating: 4, count: 3)
     print(arr1)
     
     var arr2 = arr + arr1
@@ -90,7 +129,7 @@ func collectionTypes() {
     let oddDigits: Set = [0, 1, 3, 5, 7, 9]
     let evenDigits: Set = [0, 2, 4, 6, 8]
     let singleDigitPrimeNumbers: Set = [2, 3, 5, 7]
-        
+    
     print(oddDigits.union(evenDigits).sorted()) // Создает один общий набор
     
     print(oddDigits.intersection(evenDigits).sorted()) // Набор из повторяющихся элементов
@@ -134,7 +173,7 @@ func collectionTypes() {
         print("The old value for 3 was \(oldValue)")
     }
     print(dictionariesTest)
-        
+    
     if let nameVar = dictionariesTest[3] {
         print("The nameVar of the dictionariesTest is \(nameVar).")
     } else {

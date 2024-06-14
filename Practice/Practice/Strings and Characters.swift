@@ -156,5 +156,8 @@ func stringAndCharacters() {
         }
     }
     print("\(mansionCount) mansion scenes; \(cellCount) cell scenes")
+<<<<<<< HEAD:Practice/Strings and Characters.swift
+=======
 
+>>>>>>> 8812bbb2e0c621b1417da0609af1cfa507957f37:Practice/Practice/Strings and Characters.swift
 }
