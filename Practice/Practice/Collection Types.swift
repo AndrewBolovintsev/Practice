@@ -7,7 +7,36 @@
 
 import Foundation
 
+class Shape: Collection {
+    
+    typealias Element = String
+    private var elements: [Element]
+    
+    init(elements: [Element]) {
+        self.elements = elements
+    }
+    
+    var startIndex: Int {
+        return 0
+    }
+    
+    var endIndex: Int {
+        return elements.endIndex
+    }
+    
+    subscript(position: Int) -> String {
+        return elements[position]
+    }
+    
+    func index(after i: Int) -> Int {
+        return elements.index(after: i)
+    }
+}
+
 func collectionTypes() {
+    
+    let shape = Shape(elements: ["resdgf", "etrdgfv", "wrtegfds"])
+    let first = shape[0]
     
     //Array
     var arr: [Int] = []
