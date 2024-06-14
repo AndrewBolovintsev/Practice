@@ -15,5 +15,6 @@ class ViewController: UIViewController {
         basicOperators()
         stringAndCharacters()
         collectionTypes()
+        controlFlow()
     }
 }
