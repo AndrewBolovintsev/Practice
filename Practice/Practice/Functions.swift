@@ -61,6 +61,7 @@ func functions() {
         print("\(currentValue1)", terminator: "; ")
         currentValue1 = moveNearerToZero1(currentValue1)
     }
+    print()
 }
 
 func greet(person: String) -> String {
