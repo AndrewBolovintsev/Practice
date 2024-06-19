@@ -18,5 +18,6 @@ class ViewController: UIViewController {
         controlFlow()
         functions()
         closures()
+        enumerations()
     }
 }
