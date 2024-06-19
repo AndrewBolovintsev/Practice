@@ -127,6 +127,14 @@ func closures() {
     } onFailure: {
          print("Try again later")
     }
+    
+    
+    
+    var v1: (Int) -> Int = { s1 in
+        return s1 * 2
+    }
+    
+    
 }
 
 
