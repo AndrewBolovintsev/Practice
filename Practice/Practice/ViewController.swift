@@ -19,5 +19,6 @@ class ViewController: UIViewController {
         functions()
         closures()
         enumerations()
+        structuresAndClasses()
     }
 }
