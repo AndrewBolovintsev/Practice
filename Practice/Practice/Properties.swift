@@ -86,4 +86,167 @@ func properties() {
     let stepCounter = StepCounter()
     stepCounter.totalSteps = 200
     stepCounter.totalSteps = 360
+    
+    
+    
+    
+    var rectangle = SmallRectangle()
+    print(rectangle.height)
+    
+    rectangle.height = 10
+    print(rectangle.height)
+    
+    rectangle.height = 24
+    print(rectangle.height)
+    
+    
+    
+    var zeroRectangle = ZeroRectangle()
+    print(zeroRectangle.height, zeroRectangle.width)
+    
+    
+    
+    
+    print(SomeStructure.storedTypeProperty)
+    print(SomeEnumeration.computedTypeProperty)
+    print(SomeClass1.computedTypeProperty)
+    
+    
+    
+    var leftChannel = AudioChannel()
+    var rightChannel = AudioChannel()
+    
+    leftChannel.currentLevel = 7
+    print(leftChannel.currentLevel)
+
+    print(AudioChannel.maxInputLevelForAllChannels)
+    
+    
+    rightChannel.currentLevel = 11
+    print(rightChannel.currentLevel)
+
+    print(AudioChannel.maxInputLevelForAllChannels)
+    
+    
+    var someStructure = SomeStructure1()
+
+    someStructure.someNumber = 4
+    print(someStructure.$someNumber)
+
+    someStructure.someNumber = 55
+    print(someStructure.$someNumber)
+}
+
+
+@propertyWrapper
+struct SmallNumber1 {
+    private var number: Int
+    private(set) var projectedValue: Bool
+
+    var wrappedValue: Int {
+        get { return number }
+        set {
+            if newValue > 12 {
+                number = 12
+                projectedValue = true
+            } else {
+                number = newValue
+                projectedValue = false
+            }
+        }
+    }
+
+    init() {
+        self.number = 0
+        self.projectedValue = false
+    }
+}
+struct SomeStructure1 {
+    @SmallNumber1 var someNumber: Int
+}
+
+
+
+
+
+@propertyWrapper
+struct TwentyOrLess {
+    private var number = 0
+    var wrappedValue: Int {
+        get { return number }
+        set { number = max(newValue, 20) }
+    }
+}
+
+@propertyWrapper
+struct SmallNumber {
+    private var maximum: Int
+    private var number: Int
+
+
+    var wrappedValue: Int {
+        get { return number }
+        set { number = min(newValue, maximum) }
+    }
+
+
+    init() {
+        maximum = 12
+        number = 0
+    }
+    init(wrappedValue: Int) {
+        maximum = 12
+        number = min(wrappedValue, maximum)
+    }
+    init(wrappedValue: Int, maximum: Int) {
+        self.maximum = maximum
+        number = min(wrappedValue, maximum)
+    }
+}
+
+struct ZeroRectangle {
+    @SmallNumber var height: Int
+    @SmallNumber var width: Int
+}
+
+struct SmallRectangle {
+    @TwentyOrLess var height: Int
+    @TwentyOrLess var width: Int
+}
+
+struct SomeStructure {
+    static var storedTypeProperty = "Some value."
+    static var computedTypeProperty: Int {
+        return 1
+    }
+}
+enum SomeEnumeration {
+    static var storedTypeProperty = "Some value."
+    static var computedTypeProperty: Int {
+        return 6
+    }
+}
+class SomeClass1 {
+    static var storedTypeProperty = "Some value."
+    static var computedTypeProperty: Int {
+        return 27
+    }
+    class var overrideableComputedTypeProperty: Int {
+        return 107
+    }
+}
+
+struct AudioChannel {
+    static let thresholdLevel = 10
+    static var maxInputLevelForAllChannels = 0
+    var currentLevel: Int = 0 {
+        didSet {
+            if currentLevel > AudioChannel.thresholdLevel {
+                currentLevel = AudioChannel.thresholdLevel
+            }
+            if currentLevel > AudioChannel.maxInputLevelForAllChannels {
+                AudioChannel.maxInputLevelForAllChannels = currentLevel
+            }
+        }
+    }
 }
