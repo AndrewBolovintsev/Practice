@@ -24,6 +24,7 @@
 		A0B5D4672C19CDD300B5923F /* Strings and Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B5D4662C19CDD300B5923F /* Strings and Characters.swift */; };
 		A0B5D4692C19D0D200B5923F /* Collection Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B5D4682C19D0D200B5923F /* Collection Types.swift */; };
 		A0FC63D42C235C7E00A4C4C8 /* Enumerations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FC63D32C235C7E00A4C4C8 /* Enumerations.swift */; };
+		A0FC63D62C235F1E00A4C4C8 /* Structures And Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FC63D52C235F1E00A4C4C8 /* Structures And Classes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		A0B5D4662C19CDD300B5923F /* Strings and Characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Strings and Characters.swift"; sourceTree = "<group>"; };
 		A0B5D4682C19D0D200B5923F /* Collection Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection Types.swift"; sourceTree = "<group>"; };
 		A0FC63D32C235C7E00A4C4C8 /* Enumerations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumerations.swift; sourceTree = "<group>"; };
+		A0FC63D52C235F1E00A4C4C8 /* Structures And Classes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Structures And Classes.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				A04204162C1C7B6C009EBE0D /* Functions.swift */,
 				A04204182C203FA5009EBE0D /* Closures.swift */,
 				A0FC63D32C235C7E00A4C4C8 /* Enumerations.swift */,
+				A0FC63D52C235F1E00A4C4C8 /* Structures And Classes.swift */,
 			);
 			path = Practice;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				A098070D2C172A7300B8138F /* ViewController.swift in Sources */,
 				A09807092C172A7300B8138F /* AppDelegate.swift in Sources */,
 				A04204192C203FA5009EBE0D /* Closures.swift in Sources */,
+				A0FC63D62C235F1E00A4C4C8 /* Structures And Classes.swift in Sources */,
 				A0034DD12C1C204400069F0A /* Control Flow.swift in Sources */,
 				A098070B2C172A7300B8138F /* SceneDelegate.swift in Sources */,
 				A0FC63D42C235C7E00A4C4C8 /* Enumerations.swift in Sources */,
