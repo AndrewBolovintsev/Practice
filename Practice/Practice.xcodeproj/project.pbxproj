@@ -26,6 +26,7 @@
 		A0FC63D42C235C7E00A4C4C8 /* Enumerations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FC63D32C235C7E00A4C4C8 /* Enumerations.swift */; };
 		A0FC63D62C235F1E00A4C4C8 /* Structures And Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FC63D52C235F1E00A4C4C8 /* Structures And Classes.swift */; };
 		A0FC63D82C240CDD00A4C4C8 /* Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FC63D72C240CDD00A4C4C8 /* Properties.swift */; };
+		A0FC63DA2C296C0300A4C4C8 /* Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FC63D92C296C0300A4C4C8 /* Methods.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		A0FC63D32C235C7E00A4C4C8 /* Enumerations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumerations.swift; sourceTree = "<group>"; };
 		A0FC63D52C235F1E00A4C4C8 /* Structures And Classes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Structures And Classes.swift"; sourceTree = "<group>"; };
 		A0FC63D72C240CDD00A4C4C8 /* Properties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Properties.swift; sourceTree = "<group>"; };
+		A0FC63D92C296C0300A4C4C8 /* Methods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Methods.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 				A0FC63D32C235C7E00A4C4C8 /* Enumerations.swift */,
 				A0FC63D52C235F1E00A4C4C8 /* Structures And Classes.swift */,
 				A0FC63D72C240CDD00A4C4C8 /* Properties.swift */,
+				A0FC63D92C296C0300A4C4C8 /* Methods.swift */,
 			);
 			path = Practice;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				A098070D2C172A7300B8138F /* ViewController.swift in Sources */,
 				A09807092C172A7300B8138F /* AppDelegate.swift in Sources */,
 				A0FC63D82C240CDD00A4C4C8 /* Properties.swift in Sources */,
+				A0FC63DA2C296C0300A4C4C8 /* Methods.swift in Sources */,
 				A04204192C203FA5009EBE0D /* Closures.swift in Sources */,
 				A0FC63D62C235F1E00A4C4C8 /* Structures And Classes.swift in Sources */,
 				A0034DD12C1C204400069F0A /* Control Flow.swift in Sources */,
