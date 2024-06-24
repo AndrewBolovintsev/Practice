@@ -22,5 +22,6 @@ class ViewController: UIViewController {
         structuresAndClasses()
         properties()
         methods()
+        subscripts()
     }
 }
