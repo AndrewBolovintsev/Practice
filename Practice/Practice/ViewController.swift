@@ -21,5 +21,6 @@ class ViewController: UIViewController {
         enumerations()
         structuresAndClasses()
         properties()
+        methods()
     }
 }
