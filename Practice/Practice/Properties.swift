@@ -87,26 +87,6 @@ func properties() {
     stepCounter.totalSteps = 200
     stepCounter.totalSteps = 360
     
-    
-    
-    
-    var rectangle = SmallRectangle()
-    print(rectangle.height)
-    
-    rectangle.height = 10
-    print(rectangle.height)
-    
-    rectangle.height = 24
-    print(rectangle.height)
-    
-    
-    
-    var zeroRectangle = ZeroRectangle()
-    print(zeroRectangle.height, zeroRectangle.width)
-    
-    
-    
-    
     print(SomeStructure.storedTypeProperty)
     print(SomeEnumeration.computedTypeProperty)
     print(SomeClass1.computedTypeProperty)
@@ -128,90 +108,52 @@ func properties() {
     print(AudioChannel.maxInputLevelForAllChannels)
     
     
+    
+    
+    
+    
+    
+    var rectangle = Rectangle()
+    print(rectangle.height, rectangle.width)
+    
+    var unitRectangle = UnitRectangle()
+    print(unitRectangle.height, unitRectangle.width)
+    
+    var narrowRectangle = NarrowRectangle()
+    print(narrowRectangle.height, narrowRectangle.width)
+
+    narrowRectangle.height = 100
+    narrowRectangle.width = 100
+    print(narrowRectangle.height, narrowRectangle.width)
+    
+    var mixedRectangle = MixedRectangle()
+    print(mixedRectangle.height)
+
+    mixedRectangle.height = 20
+    print(mixedRectangle.height)
+
+    
+    
     var someStructure = SomeStructure1()
+    someStructure.num = 55
+    print(someStructure.$num)
+    
+    
+    var recg = SizedRectangle()
+    let wasAdjustedSmall = recg.resize(to: .small)
 
-    someStructure.someNumber = 4
-    print(someStructure.$someNumber)
+    print("Height: \(recg.height), Width: \(recg.width)")
+    print("Was height adjusted? \(recg.$height)")
+    print("Was width adjusted? \(recg.$width)")
+    print("Result of resize to small: \(wasAdjustedSmall)")
 
-    someStructure.someNumber = 55
-    print(someStructure.$someNumber)
-}
+    print()
 
-
-@propertyWrapper
-struct SmallNumber1 {
-    private var number: Int
-    private(set) var projectedValue: Bool
-
-    var wrappedValue: Int {
-        get { return number }
-        set {
-            if newValue > 12 {
-                number = 12
-                projectedValue = true
-            } else {
-                number = newValue
-                projectedValue = false
-            }
-        }
-    }
-
-    init() {
-        self.number = 0
-        self.projectedValue = false
-    }
-}
-struct SomeStructure1 {
-    @SmallNumber1 var someNumber: Int
-}
-
-
-
-
-
-@propertyWrapper
-struct TwentyOrLess {
-    private var number = 0
-    var wrappedValue: Int {
-        get { return number }
-        set { number = max(newValue, 20) }
-    }
-}
-
-@propertyWrapper
-struct SmallNumber {
-    private var maximum: Int
-    private var number: Int
-
-
-    var wrappedValue: Int {
-        get { return number }
-        set { number = min(newValue, maximum) }
-    }
-
-
-    init() {
-        maximum = 12
-        number = 0
-    }
-    init(wrappedValue: Int) {
-        maximum = 12
-        number = min(wrappedValue, maximum)
-    }
-    init(wrappedValue: Int, maximum: Int) {
-        self.maximum = maximum
-        number = min(wrappedValue, maximum)
-    }
-}
-
-struct ZeroRectangle {
-    @SmallNumber var height: Int
-    @SmallNumber var width: Int
-}
-
-struct SmallRectangle {
-    @TwentyOrLess var height: Int
-    @TwentyOrLess var width: Int
+    let wasAdjustedLarge = recg.resize(to: .large)
+    print("Height: \(recg.height), Width: \(recg.width)")
+    print("Was height adjusted? \(recg.$height)")
+    print("Was width adjusted? \(recg.$width)")
+    print("Result of resize to large: \(wasAdjustedLarge)")
 }
 
 struct SomeStructure {
@@ -248,5 +190,108 @@ struct AudioChannel {
                 AudioChannel.maxInputLevelForAllChannels = currentLevel
             }
         }
+    }
+}
+
+
+
+
+@propertyWrapper
+struct SizeLimiter {
+    
+    private var maximum: Int
+    private var number: Int
+    
+    var wrappedValue: Int  {
+        get {
+            return number
+        }
+        set {
+            number = min(newValue, maximum)
+        }
+    }
+    
+    init() {
+        maximum = 20
+        number = 0
+    }
+    init(wrappedValue: Int) {
+        maximum = 20
+        number = min(wrappedValue, maximum)
+    }
+    init(wrappedValue: Int, maximum: Int) {
+        self.maximum = maximum
+        number = min(wrappedValue, maximum)
+    }
+}
+
+struct Rectangle {
+    @SizeLimiter var height: Int
+    @SizeLimiter var width: Int
+}
+
+struct UnitRectangle {
+    @SizeLimiter var height: Int = 1
+    @SizeLimiter var width: Int = 1
+}
+
+struct NarrowRectangle {
+    @SizeLimiter(wrappedValue: 7, maximum: 5) var height: Int
+    @SizeLimiter(wrappedValue: 3, maximum: 4) var width: Int
+}
+
+struct MixedRectangle {
+    @SizeLimiter var height: Int = 1
+    @SizeLimiter(maximum: 9) var width: Int = 2
+}
+
+
+@propertyWrapper
+struct SizeLimiter1 {
+    private var number: Int
+    private(set) var projectedValue: Bool
+    
+    var wrappedValue: Int {
+        get { return number }
+        set {
+            if newValue > 20 {
+                number = 20
+                projectedValue = true
+            } else {
+                number = newValue
+                projectedValue = false
+            }
+        }
+    }
+    
+    init() {
+        self.number = 0
+        self.projectedValue = false
+    }
+}
+
+struct SomeStructure1 {
+    @SizeLimiter1 var num: Int
+}
+
+enum Size1 {
+    case small, large
+}
+
+struct SizedRectangle {
+    @SizeLimiter1 var height: Int
+    @SizeLimiter1 var width: Int
+
+
+    mutating func resize(to size: Size1) -> Bool {
+        switch size {
+        case .small:
+            height = 10
+            width = 20
+        case .large:
+            height = 100
+            width = 100
+        }
+        return $height || $width
     }
 }
