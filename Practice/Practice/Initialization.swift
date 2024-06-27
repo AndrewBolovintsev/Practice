@@ -191,3 +191,4 @@ struct Rect6 {
         self.init(origin: Point6(x: originX, y: originY), size: size)
     }
 }
+
