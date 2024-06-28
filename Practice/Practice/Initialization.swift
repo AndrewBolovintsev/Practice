@@ -152,6 +152,33 @@ func initialization() {
     } else {
         print("Unable to initialize one unnamed product")
     }
+    
+    
+    let doc = Document()
+    print(doc.name)
+    var autoNameDoc = AutomaticallyNamedDocument()
+    if let name = autoNameDoc.name { print(name) }
+    autoNameDoc = AutomaticallyNamedDocument(name: "Alex")
+    if let name = autoNameDoc.name { print(name) }
+    let untitle = UntitledDocument()
+    if let name = untitle.name { print(name) }
+    
+    
+    
+    let myDog = Dog(name: "Lyli", breed: "Labrador")
+    let unknownDog = Dog()
+
+    print("My dog's name is \(myDog.name) and breed is \(myDog.breed)")
+    print("Unknown dog's name is \(unknownDog.name) and breed is \(unknownDog.breed)")
+    
+    
+    
+    let test = Test()
+    print(test.test)
+    
+    let board = Chessboard()
+    print(board.squareIsBlackAt(row: 0, column: 1))
+    print(board.squareIsBlackAt(row: 7, column: 7))
 }
 
 
@@ -407,5 +434,102 @@ class CartItem: Product {
         
         self.quantity = quantity
         super.init(name: name)
+    }
+}
+
+
+
+class Document {
+    
+    var name: String?
+
+    init() {}
+
+    init?(name: String) {
+        if name.isEmpty { return nil }
+        self.name = name
+    }
+}
+class AutomaticallyNamedDocument: Document {
+    
+    override init() {
+        super.init()
+        self.name = "[Untitled]"
+    }
+    
+    override init(name: String) {
+        super.init()
+        if name.isEmpty {
+            self.name = "[Untitled]"
+        } else {
+            self.name = name
+        }
+    }
+}
+class UntitledDocument: Document {
+    
+    override init() {
+        super.init(name: "[Untitled]")!
+    }
+}
+
+
+
+class Animal1 {
+    var name: String
+    
+    init(name: String) {
+        self.name = name
+    }
+    
+    required init() {
+        self.name = "Unnamed"
+    }
+}
+class Dog: Animal1 {
+    var breed: String
+    
+    init(name: String, breed: String) {
+        self.breed = breed
+        super.init(name: name)
+    }
+    
+    required init() {
+        self.breed = "Unknown"
+        super.init()
+    }
+}
+
+
+
+struct Test {
+    let test: Int = {
+        45 * 23
+    }()
+}
+
+struct Chessboard {
+    
+    let boardColors: [Bool] = {
+        
+        var temporaryBoard: [Bool] = []
+        var isBlack = false
+        
+        for i in 1...8 {
+            for j in 1...8 {
+                
+                temporaryBoard.append(isBlack)
+                isBlack = !isBlack
+                
+            }
+            
+            isBlack = !isBlack
+        }
+        
+        return temporaryBoard
+    }()
+    
+    func squareIsBlackAt(row: Int, column: Int) -> Bool {
+        return boardColors[(row * 8) + column]
     }
 }
