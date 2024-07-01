@@ -27,19 +27,11 @@
 		A0FC63D62C235F1E00A4C4C8 /* Structures And Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FC63D52C235F1E00A4C4C8 /* Structures And Classes.swift */; };
 		A0FC63D82C240CDD00A4C4C8 /* Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FC63D72C240CDD00A4C4C8 /* Properties.swift */; };
 		A0FC63DA2C296C0300A4C4C8 /* Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FC63D92C296C0300A4C4C8 /* Methods.swift */; };
-<<<<<<< HEAD
-<<<<<<< HEAD
 		A0FC63DC2C2993C900A4C4C8 /* Subscripts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FC63DB2C2993C900A4C4C8 /* Subscripts.swift */; };
-<<<<<<< HEAD
-=======
 		A0FC63DE2C2AA12700A4C4C8 /* ARC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FC63DD2C2AA12700A4C4C8 /* ARC.swift */; };
->>>>>>> 26_ARC
-=======
 		A0FC63E02C2B437900A4C4C8 /* Inheritance.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FC63DF2C2B437900A4C4C8 /* Inheritance.swift */; };
->>>>>>> 13_Inheritance
-=======
 		A0FC63E42C2BF3C000A4C4C8 /* Initialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FC63E32C2BF3C000A4C4C8 /* Initialization.swift */; };
->>>>>>> 14_Initialization
+		A0FC642B2C32C2A600A4C4C8 /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FC642A2C32C2A600A4C4C8 /* ErrorHandling.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,19 +76,11 @@
 		A0FC63D52C235F1E00A4C4C8 /* Structures And Classes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Structures And Classes.swift"; sourceTree = "<group>"; };
 		A0FC63D72C240CDD00A4C4C8 /* Properties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Properties.swift; sourceTree = "<group>"; };
 		A0FC63D92C296C0300A4C4C8 /* Methods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Methods.swift; sourceTree = "<group>"; };
-<<<<<<< HEAD
-<<<<<<< HEAD
 		A0FC63DB2C2993C900A4C4C8 /* Subscripts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscripts.swift; sourceTree = "<group>"; };
-<<<<<<< HEAD
-=======
 		A0FC63DD2C2AA12700A4C4C8 /* ARC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARC.swift; sourceTree = "<group>"; };
->>>>>>> 26_ARC
-=======
 		A0FC63DF2C2B437900A4C4C8 /* Inheritance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inheritance.swift; sourceTree = "<group>"; };
->>>>>>> 13_Inheritance
-=======
 		A0FC63E32C2BF3C000A4C4C8 /* Initialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Initialization.swift; sourceTree = "<group>"; };
->>>>>>> 14_Initialization
+		A0FC642A2C32C2A600A4C4C8 /* ErrorHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandling.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,19 +149,11 @@
 				A0FC63D52C235F1E00A4C4C8 /* Structures And Classes.swift */,
 				A0FC63D72C240CDD00A4C4C8 /* Properties.swift */,
 				A0FC63D92C296C0300A4C4C8 /* Methods.swift */,
-<<<<<<< HEAD
-<<<<<<< HEAD
 				A0FC63DB2C2993C900A4C4C8 /* Subscripts.swift */,
-<<<<<<< HEAD
-=======
 				A0FC63DD2C2AA12700A4C4C8 /* ARC.swift */,
->>>>>>> 26_ARC
-=======
 				A0FC63DF2C2B437900A4C4C8 /* Inheritance.swift */,
->>>>>>> 13_Inheritance
-=======
 				A0FC63E32C2BF3C000A4C4C8 /* Initialization.swift */,
->>>>>>> 14_Initialization
+				A0FC642A2C32C2A600A4C4C8 /* ErrorHandling.swift */,
 			);
 			path = Practice;
 			sourceTree = "<group>";
@@ -337,15 +313,13 @@
 				A0FC63E42C2BF3C000A4C4C8 /* Initialization.swift in Sources */,
 				A0967A872C184F080002CC9A /* Basic Operators.swift in Sources */,
 				A0558A9F2C173FEC00862740 /* Basics.swift in Sources */,
+				A0FC642B2C32C2A600A4C4C8 /* ErrorHandling.swift in Sources */,
 				A098070D2C172A7300B8138F /* ViewController.swift in Sources */,
 				A09807092C172A7300B8138F /* AppDelegate.swift in Sources */,
 				A0FC63D82C240CDD00A4C4C8 /* Properties.swift in Sources */,
 				A0FC63DA2C296C0300A4C4C8 /* Methods.swift in Sources */,
 				A04204192C203FA5009EBE0D /* Closures.swift in Sources */,
-<<<<<<< HEAD
-=======
 				A0FC63DE2C2AA12700A4C4C8 /* ARC.swift in Sources */,
->>>>>>> 26_ARC
 				A0FC63DC2C2993C900A4C4C8 /* Subscripts.swift in Sources */,
 				A0FC63D62C235F1E00A4C4C8 /* Structures And Classes.swift in Sources */,
 				A0034DD12C1C204400069F0A /* Control Flow.swift in Sources */,
