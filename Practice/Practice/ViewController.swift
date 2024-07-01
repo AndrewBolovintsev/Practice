@@ -23,5 +23,6 @@ class ViewController: UIViewController {
         properties()
         methods()
         subscripts()
+        arc()
     }
 }
