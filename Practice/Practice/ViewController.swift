@@ -25,5 +25,6 @@ class ViewController: UIViewController {
         subscripts()
         arc()
         inheritance()
+        initialization()
     }
 }
