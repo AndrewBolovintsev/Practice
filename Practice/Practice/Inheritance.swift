@@ -9,10 +9,10 @@ import Foundation
 
 func inheritance() {
     
-    let someVehicle = Vehicle()
+    let someVehicle = Vehicle1()
     print("Vehicle: \(someVehicle.description)")
     
-    let bicycle = Bicycle()
+    let bicycle = Bicycle1()
     bicycle.hasBasket = true
     bicycle.currentSpeed = 15.0
     print("Bicycle: \(bicycle.description)")
@@ -37,7 +37,7 @@ func inheritance() {
     print("AutomaticCar: \(automatic.description)")
 }
 
-class Vehicle {
+class Vehicle1 {
     
     var currentSpeed = 0.0
     var description: String {
@@ -49,21 +49,21 @@ class Vehicle {
     }
 }
 
-class Bicycle: Vehicle {
+class Bicycle1: Vehicle1 {
     final var hasBasket = false
 }
 
-final class Tandem: Bicycle {
+final class Tandem: Bicycle1 {
     var currentNumberOfPassengers = 0
 }
 
-final class Train: Vehicle {
+final class Train: Vehicle1 {
     override func makeNoise() {
         print("Choo Choo")
     }
 }
 
-class Car1: Vehicle {
+class Car1: Vehicle1 {
     var gear = 1
     override var description: String {
         return super.description + " in gear \(gear)"
