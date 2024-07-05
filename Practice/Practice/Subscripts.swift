@@ -9,7 +9,7 @@ import Foundation
 
 func subscripts() {
     
-    let threeTimesTable = Test(multiplier: 3)
+    let threeTimesTable = Test5(multiplier: 3)
     print(threeTimesTable[6])
     
     
@@ -28,7 +28,7 @@ func subscripts() {
     print(matrix[1, 0])
 }
 
-struct Test {
+struct Test5 {
     let multiplier: Int
     subscript(index: Int) -> Int {
         multiplier * index + index

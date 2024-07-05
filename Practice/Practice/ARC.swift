@@ -9,11 +9,11 @@ import Foundation
 
 func arc() {
     
-    var reference1: Person1?
-    var reference2: Person1?
-    var reference3: Person1?
+    var reference1: Person11?
+    var reference2: Person11?
+    var reference3: Person11?
     
-    reference1 = Person1(name: "John Appleseed")
+    reference1 = Person11(name: "John Appleseed")
     reference2 = reference1
     reference3 = reference1
     
@@ -77,7 +77,7 @@ func arc() {
 }
 
 
-class Person1 {
+class Person11{
     let name: String
     init(name: String) {
         self.name = name
