@@ -8,15 +8,6 @@
 import Foundation
 
 func concurrency()  {
-    do {
-        try test()
-    }
-    catch {
-        proccessError(error: error)
-    }
-    
-    
-    
     
     Task { await printAsync() }
     performOtherTasks()
@@ -24,6 +15,34 @@ func concurrency()  {
     
     Task { await processData() }
     performOtherTasks()
+    
+    
+    Task {
+        print("Starting sequential tasks")
+        await Task.sleep(3)
+        print("Completed 3 seconds wait")
+        await Task.sleep(4)
+        print("Completed 4 seconds wait")
+        await Task.sleep(5)
+        print("Completed 5 seconds wait")
+        print("All sequential tasks completed")
+        
+        print("Starting parallel tasks")
+        async let waitAsync1 = Task.sleep(3)
+        async let waitAsync2 = Task.sleep(4)
+        async let waitAsync3 = Task.sleep(5)
+        await waitAsync1
+        print("Completed 3 seconds wait")
+        await waitAsync2
+        print("Completed 4 seconds wait")
+        await waitAsync3
+        print("Completed 5 seconds wait")
+        print("All parallel tasks completed")
+    }
+    
+    
+    
+    
 }
 
 func performOtherTasks() {
@@ -53,7 +72,7 @@ enum SimpleError: Error {
     case somethingWentWrong
 }
 func doSomethingAsync() async throws -> String {
-
+    
     try await Task.sleep(nanoseconds: 2 * 1_000_000_000)
     
     let success = Bool.random()
@@ -70,32 +89,4 @@ func processData() async {
     } catch {
         print("Произошла ошибка: \(error)")
     }
-}
-
-
-
-
-
-
-
-enum NetworkConnection: Error {
-    case num404
-    case num500
-}
-
-func test() throws {
-    throw NetworkConnection.num404
-}
-
-func proccessError(error: Error) {
-    switch error {
-    case NetworkConnection.num404:
-        print("404")
-    default:
-        print("Not name error")
-    }
-}
-
-func performOperation(_ operation: () throws -> Void) rethrows {
-    try operation()
 }
