@@ -26,5 +26,6 @@ class ViewController: UIViewController {
         arc()
         inheritance()
         initialization()
+        deinitialization()
     }
 }
