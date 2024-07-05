@@ -17,13 +17,13 @@ func inheritance() {
     bicycle.currentSpeed = 15.0
     print("Bicycle: \(bicycle.description)")
     
-    let tandem = Tandem()
+    let tandem = Tandem5()
     tandem.hasBasket = true
     tandem.currentNumberOfPassengers = 2
     tandem.currentSpeed = 22.0
     print("Tandem: \(tandem.description)")
     
-    let train = Train()
+    let train = Train5()
     train.makeNoise()
     
     let car = Car1()
@@ -58,6 +58,14 @@ final class Tandem: Bicycle5 {
 }
 
 final class Train: Vehicle5 {
+    final var hasBasket = false
+}
+
+final class Tandem5: Bicycle5 {
+    var currentNumberOfPassengers = 0
+}
+
+final class Train5: Vehicle5 {
     override func makeNoise() {
         print("Choo Choo")
     }

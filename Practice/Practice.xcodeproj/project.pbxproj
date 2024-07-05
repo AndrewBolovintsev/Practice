@@ -33,6 +33,7 @@
 		A0FC63E42C2BF3C000A4C4C8 /* Initialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FC63E32C2BF3C000A4C4C8 /* Initialization.swift */; };
 		A0FC63E62C2EFFF300A4C4C8 /* Deinitialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FC63E52C2EFFF300A4C4C8 /* Deinitialization.swift */; };
 		A0FC64292C31D47200A4C4C8 /* Optional Chaining .swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FC64282C31D47200A4C4C8 /* Optional Chaining .swift */; };
+		A0FC642B2C32C2A600A4C4C8 /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FC642A2C32C2A600A4C4C8 /* ErrorHandling.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		A0FC63E32C2BF3C000A4C4C8 /* Initialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Initialization.swift; sourceTree = "<group>"; };
 		A0FC63E52C2EFFF300A4C4C8 /* Deinitialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deinitialization.swift; sourceTree = "<group>"; };
 		A0FC64282C31D47200A4C4C8 /* Optional Chaining .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional Chaining .swift"; sourceTree = "<group>"; };
+		A0FC642A2C32C2A600A4C4C8 /* ErrorHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandling.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 				A0FC63E32C2BF3C000A4C4C8 /* Initialization.swift */,
 				A0FC63E52C2EFFF300A4C4C8 /* Deinitialization.swift */,
 				A0FC64282C31D47200A4C4C8 /* Optional Chaining .swift */,
+				A0FC642A2C32C2A600A4C4C8 /* ErrorHandling.swift */,
 			);
 			path = Practice;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				A0FC63E42C2BF3C000A4C4C8 /* Initialization.swift in Sources */,
 				A0967A872C184F080002CC9A /* Basic Operators.swift in Sources */,
 				A0558A9F2C173FEC00862740 /* Basics.swift in Sources */,
+				A0FC642B2C32C2A600A4C4C8 /* ErrorHandling.swift in Sources */,
 				A098070D2C172A7300B8138F /* ViewController.swift in Sources */,
 				A09807092C172A7300B8138F /* AppDelegate.swift in Sources */,
 				A0FC63D82C240CDD00A4C4C8 /* Properties.swift in Sources */,

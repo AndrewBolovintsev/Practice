@@ -28,5 +28,6 @@ class ViewController: UIViewController {
         initialization()
         deinitialization()
         optionalChaining()
+        errorHandling()
     }
 }
