@@ -42,6 +42,22 @@ func concurrency()  {
     
     
     
+    Task {
+        let results = await executeTasks()
+        print("Final Results: \(results)")
+    }
+    
+    
+    
+    let logger = TemperatureLogger(label: "Outdoors", measurement: 25)
+    Task { print(await logger.max) }
+    
+    Task {
+        let logger = TemperatureLogger(label: "Tea kettle", measurement: 85)
+        let reading = TemperatureReading(measurement: 45)
+        await logger.addReading(from: reading)
+        print(await logger.max)
+    }
     
 }
 
@@ -90,3 +106,79 @@ func processData() async {
         print("Произошла ошибка: \(error)")
     }
 }
+
+
+
+func executeTasks() async -> [String] {
+    var results: [String] = []
+    
+    await withTaskGroup(of: Optional<String>.self) { group in
+        for i in 1...5 {
+            group.addTask {
+                return await performAsyncTask(named: "Task \(i)")
+            }
+        }
+        
+        for await result in group {
+            if let result = result {
+                results.append(result)
+            }
+        }
+    }
+    
+    return results
+}
+func performAsyncTask(named name: String) async -> String? {
+    let delay = UInt64.random(in: 1...5)
+    print("\(name): Sleeping for \(delay) seconds...")
+    try? await Task.sleep(nanoseconds: delay * 1_000_000)
+    
+    let randomNumber = Int.random(in: 1...5)
+    if randomNumber == 3 {
+        print("\(name): Task is cancelled due to random number 3.")
+        do {
+            try Task.checkCancellation()
+        } catch {
+            print("\(name): Task was cancelled.")
+            return nil
+        }
+    }
+    
+    print("\(name): Completed with random number \(randomNumber).")
+    return "\(name): Result"
+}
+
+
+
+actor TemperatureLogger {
+    
+    let label: String
+    var measurements: [Int]
+    private(set) var max: Int
+    
+    init(label: String, measurement: Int) {
+        self.label = label
+        self.measurements = [measurement]
+        self.max = measurement
+    }
+    
+    func convertFahrenheitToCelsius() {
+        measurements = measurements.map { measurement in
+            (measurement - 32) * 5 / 9
+        }
+    }
+}
+
+struct TemperatureReading: Sendable {
+    var measurement: Int
+}
+extension TemperatureLogger {
+    func addReading(from reading: TemperatureReading) {
+        measurements.append(reading.measurement)
+    }
+}
+struct FileDescriptor {
+    let rawValue: CInt
+}
+@available(*, unavailable)
+extension FileDescriptor: Sendable { }
