@@ -9,6 +9,8 @@ import Foundation
 
 func macros() {
     myFunction()
+    
+    
 }
 
 func myFunction() {
