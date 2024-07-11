@@ -23,6 +23,7 @@
 		A098072C2C172A7600B8138F /* PracticeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A098072B2C172A7600B8138F /* PracticeUITestsLaunchTests.swift */; };
 		A0B5D4672C19CDD300B5923F /* Strings and Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B5D4662C19CDD300B5923F /* Strings and Characters.swift */; };
 		A0B5D4692C19D0D200B5923F /* Collection Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B5D4682C19D0D200B5923F /* Collection Types.swift */; };
+		A0CE28162C3FCAFF0041AB8F /* TypeCasting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CE28152C3FCAFF0041AB8F /* TypeCasting.swift */; };
 		A0FC63D42C235C7E00A4C4C8 /* Enumerations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FC63D32C235C7E00A4C4C8 /* Enumerations.swift */; };
 		A0FC63D62C235F1E00A4C4C8 /* Structures And Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FC63D52C235F1E00A4C4C8 /* Structures And Classes.swift */; };
 		A0FC63D82C240CDD00A4C4C8 /* Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FC63D72C240CDD00A4C4C8 /* Properties.swift */; };
@@ -74,6 +75,7 @@
 		A098072B2C172A7600B8138F /* PracticeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A0B5D4662C19CDD300B5923F /* Strings and Characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Strings and Characters.swift"; sourceTree = "<group>"; };
 		A0B5D4682C19D0D200B5923F /* Collection Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection Types.swift"; sourceTree = "<group>"; };
+		A0CE28152C3FCAFF0041AB8F /* TypeCasting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCasting.swift; sourceTree = "<group>"; };
 		A0FC63D32C235C7E00A4C4C8 /* Enumerations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumerations.swift; sourceTree = "<group>"; };
 		A0FC63D52C235F1E00A4C4C8 /* Structures And Classes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Structures And Classes.swift"; sourceTree = "<group>"; };
 		A0FC63D72C240CDD00A4C4C8 /* Properties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Properties.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				A0FC63E52C2EFFF300A4C4C8 /* Deinitialization.swift */,
 				A0FC64282C31D47200A4C4C8 /* Optional Chaining .swift */,
 				A0FC642A2C32C2A600A4C4C8 /* ErrorHandling.swift */,
+				A0CE28152C3FCAFF0041AB8F /* TypeCasting.swift */,
 			);
 			path = Practice;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				A0B5D4672C19CDD300B5923F /* Strings and Characters.swift in Sources */,
 				A0B5D4692C19D0D200B5923F /* Collection Types.swift in Sources */,
 				A0FC63E02C2B437900A4C4C8 /* Inheritance.swift in Sources */,
+				A0CE28162C3FCAFF0041AB8F /* TypeCasting.swift in Sources */,
 				A0FC63E62C2EFFF300A4C4C8 /* Deinitialization.swift in Sources */,
 				A04204172C1C7B6C009EBE0D /* Functions.swift in Sources */,
 				A0FC63E42C2BF3C000A4C4C8 /* Initialization.swift in Sources */,
