@@ -11,6 +11,7 @@
 		A04204172C1C7B6C009EBE0D /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04204162C1C7B6C009EBE0D /* Functions.swift */; };
 		A04204192C203FA5009EBE0D /* Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04204182C203FA5009EBE0D /* Closures.swift */; };
 		A0558A9F2C173FEC00862740 /* Basics.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0558A9E2C173FEC00862740 /* Basics.swift */; };
+		A05DD2902C53A87D00A4B410 /* Generics.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05DD28F2C53A87D00A4B410 /* Generics.swift */; };
 		A0967A872C184F080002CC9A /* Basic Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0967A862C184F080002CC9A /* Basic Operators.swift */; };
 		A09807092C172A7300B8138F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09807082C172A7300B8138F /* AppDelegate.swift */; };
 		A098070B2C172A7300B8138F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A098070A2C172A7300B8138F /* SceneDelegate.swift */; };
@@ -58,6 +59,7 @@
 		A04204162C1C7B6C009EBE0D /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		A04204182C203FA5009EBE0D /* Closures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closures.swift; sourceTree = "<group>"; };
 		A0558A9E2C173FEC00862740 /* Basics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Basics.swift; sourceTree = "<group>"; };
+		A05DD28F2C53A87D00A4B410 /* Generics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generics.swift; sourceTree = "<group>"; };
 		A0967A862C184F080002CC9A /* Basic Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Basic Operators.swift"; sourceTree = "<group>"; };
 		A09807052C172A7300B8138F /* Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A09807082C172A7300B8138F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -136,30 +138,31 @@
 			isa = PBXGroup;
 			children = (
 				A09807082C172A7300B8138F /* AppDelegate.swift */,
-				A098070A2C172A7300B8138F /* SceneDelegate.swift */,
-				A098070C2C172A7300B8138F /* ViewController.swift */,
-				A0558A9E2C173FEC00862740 /* Basics.swift */,
-				A098070E2C172A7300B8138F /* Main.storyboard */,
+				A0FC63DD2C2AA12700A4C4C8 /* ARC.swift */,
 				A09807112C172A7500B8138F /* Assets.xcassets */,
-				A09807132C172A7500B8138F /* LaunchScreen.storyboard */,
-				A09807162C172A7500B8138F /* Info.plist */,
 				A0967A862C184F080002CC9A /* Basic Operators.swift */,
-				A0B5D4662C19CDD300B5923F /* Strings and Characters.swift */,
+				A0558A9E2C173FEC00862740 /* Basics.swift */,
+				A04204182C203FA5009EBE0D /* Closures.swift */,
 				A0B5D4682C19D0D200B5923F /* Collection Types.swift */,
 				A0034DD02C1C204400069F0A /* Control Flow.swift */,
-				A04204162C1C7B6C009EBE0D /* Functions.swift */,
-				A04204182C203FA5009EBE0D /* Closures.swift */,
+				A0FC63E52C2EFFF300A4C4C8 /* Deinitialization.swift */,
 				A0FC63D32C235C7E00A4C4C8 /* Enumerations.swift */,
-				A0FC63D52C235F1E00A4C4C8 /* Structures And Classes.swift */,
-				A0FC63D72C240CDD00A4C4C8 /* Properties.swift */,
-				A0FC63D92C296C0300A4C4C8 /* Methods.swift */,
-				A0FC63DB2C2993C900A4C4C8 /* Subscripts.swift */,
-				A0FC63DD2C2AA12700A4C4C8 /* ARC.swift */,
+				A0FC642A2C32C2A600A4C4C8 /* ErrorHandling.swift */,
+				A04204162C1C7B6C009EBE0D /* Functions.swift */,
+				A05DD28F2C53A87D00A4B410 /* Generics.swift */,
+				A09807162C172A7500B8138F /* Info.plist */,
 				A0FC63DF2C2B437900A4C4C8 /* Inheritance.swift */,
 				A0FC63E32C2BF3C000A4C4C8 /* Initialization.swift */,
-				A0FC63E52C2EFFF300A4C4C8 /* Deinitialization.swift */,
+				A09807132C172A7500B8138F /* LaunchScreen.storyboard */,
+				A098070E2C172A7300B8138F /* Main.storyboard */,
+				A0FC63D92C296C0300A4C4C8 /* Methods.swift */,
 				A0FC64282C31D47200A4C4C8 /* Optional Chaining .swift */,
-				A0FC642A2C32C2A600A4C4C8 /* ErrorHandling.swift */,
+				A0FC63D72C240CDD00A4C4C8 /* Properties.swift */,
+				A098070A2C172A7300B8138F /* SceneDelegate.swift */,
+				A0B5D4662C19CDD300B5923F /* Strings and Characters.swift */,
+				A0FC63D52C235F1E00A4C4C8 /* Structures And Classes.swift */,
+				A0FC63DB2C2993C900A4C4C8 /* Subscripts.swift */,
+				A098070C2C172A7300B8138F /* ViewController.swift */,
 			);
 			path = Practice;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				A0FC63DC2C2993C900A4C4C8 /* Subscripts.swift in Sources */,
 				A0FC63D62C235F1E00A4C4C8 /* Structures And Classes.swift in Sources */,
 				A0034DD12C1C204400069F0A /* Control Flow.swift in Sources */,
+				A05DD2902C53A87D00A4B410 /* Generics.swift in Sources */,
 				A098070B2C172A7300B8138F /* SceneDelegate.swift in Sources */,
 				A0FC63D42C235C7E00A4C4C8 /* Enumerations.swift in Sources */,
 			);
